@@ -1,0 +1,22 @@
+{
+  "name": "@electron-components/ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Componentes de layout compartilhados pelos aplicativos Electron.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./intro": "./src/intro/index.tsx",
+    "./configuracao": "./src/configuracao/index.tsx",
+    "./input": "./src/input/index.tsx",
+    "./segment": "./src/segment/index.tsx",
+    "./toggle": "./src/toggle/index.tsx"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "react": "19.3.1"
+  }
+}
