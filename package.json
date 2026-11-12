@@ -6,11 +6,11 @@
   "description": "Componentes de layout compartilhados pelos aplicativos Electron.",
   "exports": {
     ".": "./src/index.ts",
-    "./intro": "./src/intro/index.tsx",
-    "./configuracao": "./src/configuracao/index.tsx",
-    "./input": "./src/input/index.tsx",
-    "./segment": "./src/segment/index.tsx",
-    "./toggle": "./src/toggle/index.tsx"
+    "./intro": "./src/layout/intro/index.tsx",
+    "./configuration": "./src/layout/configuration/index.tsx",
+    "./input": "./src/form/input/index.tsx",
+    "./segment": "./src/form/segment/index.tsx",
+    "./toggle": "./src/form/toggle/index.tsx"
   },
   "peerDependencies": {
     "react": "^19.0.0"

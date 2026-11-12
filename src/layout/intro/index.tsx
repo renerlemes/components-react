@@ -7,9 +7,6 @@ export type IntroStep = {
   illustrated?: boolean;
 };
 
-/**
- * Casca dos passos de introdução. O texto e as ilustrações vêm do aplicativo.
- */
 export function Intro({ steps, onFinish, onSkip, finishLabel = 'Começar' }: { steps: readonly IntroStep[]; onFinish(): void; onSkip?(): void; finishLabel?: string }) {
   const [step, setStep] = useState(0);
   const last = Math.max(steps.length - 1, 0);

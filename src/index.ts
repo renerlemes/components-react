@@ -1,7 +1,7 @@
-import './base/styles.css';
+import './common/styles.css';
 
-export { Configuracao } from './configuracao';
-export { Input } from './input';
-export { Intro, type IntroStep } from './intro';
-export { Segment } from './segment';
-export { Toggle } from './toggle';
+export { Input } from './form/input';
+export { Segment } from './form/segment';
+export { Toggle } from './form/toggle';
+export { Configuration } from './layout/configuration';
+export { Intro, type IntroStep } from './layout/intro';

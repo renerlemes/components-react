@@ -1,6 +1,5 @@
 import './styles.css';
 
-/** Interruptor de ligado e desligado. */
 export function Toggle({
   checked,
   label,

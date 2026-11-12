@@ -1,12 +1,12 @@
 # Componentes
 
-Pacote `@electron-components/ui`. Cada componente fica em `src/<nome>/`, com `index.tsx` e `styles.css`. O estilo entra junto com o componente.
+Pacote `@electron-components/ui`. Os componentes ficam em `src/common`, `src/form` e `src/layout`. Cada um tem `index.tsx` e `styles.css`. O estilo entra junto com o componente.
 
 ```tsx
-import { Configuracao, Intro, Segment, Toggle } from '@electron-components/ui';
+import { Configuration, Intro, Segment, Toggle } from '@electron-components/ui';
 ```
 
-Também dá para importar um só: `import { Segment } from '@electron-components/ui/segment'`.
+Também dá para importar um só: `import { Segment } from '@electron-components/ui/segment'`. A página de configuração entra por `@electron-components/ui/configuration`.
 
 ## Intro
 
@@ -40,24 +40,24 @@ Casca da abertura em passos: voltar, pular, continuar, concluir e os pontos. O a
 
 As classes `welcome-lead` e `welcome-text` fazem parte do visual do passo.
 
-## Configuracao
+## Configuration
 
-Página de configurações. A coluna central empilha grupos. Cada grupo tem título e um cartão. `Configuracao.Linha` coloca o rótulo à esquerda e o controle à direita. O cartão também aceita outro conteúdo, como a lista de dispositivos.
+Página de configurações. A coluna central empilha grupos. Cada grupo tem título e um cartão. `Configuration.Line` coloca o rótulo à esquerda e o controle à direita. O cartão também aceita outro conteúdo, como a lista de dispositivos.
 
 | Parte | Props | Função |
 | --- | --- | --- |
-| `Configuracao` | `children` | Coluna centralizada, no máximo 720px. |
-| `Configuracao.Grupo` | `title`, `children` | Título e o cartão do grupo. |
-| `Configuracao.Linha` | `label`, `note?`, `children` | Rótulo, nota opcional e o controle. |
+| `Configuration` | `children` | Coluna centralizada, no máximo 720px. |
+| `Configuration.Group` | `title`, `children` | Título e o cartão do grupo. |
+| `Configuration.Line` | `label`, `note?`, `children` | Rótulo, nota opcional e o controle. |
 
 ```tsx
-<Configuracao>
-  <Configuracao.Grupo title="Configurações">
-    <Configuracao.Linha label="Iniciar com o Windows" note="Abre o aplicativo no login.">
+<Configuration>
+  <Configuration.Group title="Configurações">
+    <Configuration.Line label="Iniciar com o Windows" note="Abre o aplicativo no login.">
       <Segment label="Iniciar com o Windows" value={valor} options={opcoes} onChange={definir} />
-    </Configuracao.Linha>
-  </Configuracao.Grupo>
-</Configuracao>
+    </Configuration.Line>
+  </Configuration.Group>
+</Configuration>
 ```
 
 O botão de uma linha usa a classe `ec-action`. O valor somente leitura usa a classe `about-value`.
@@ -83,7 +83,7 @@ Escolha segmentada. Uma opção fica marcada. Serve para ligar e desligar uma op
 
 | Prop | Tipo | Função |
 | --- | --- | --- |
-| `label` | `string` | Nome acessível do grupo (`aria-label`). O rótulo visível fica na `Configuracao.Linha`. |
+| `label` | `string` | Nome acessível do grupo (`aria-label`). O rótulo visível fica na `Configuration.Line`. |
 | `value` | `string` | Opção selecionada. |
 | `options` | `{ id, label }[]` | Opções, na ordem em que aparecem. |
 | `onChange` | `(id) => void` | Chamado ao escolher outra opção. |

@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
 import './styles.css';
 
-function ConfiguracaoRoot({ children }: { children: ReactNode }) {
+function ConfigurationRoot({ children }: { children: ReactNode }) {
   return <div className="ec-page">{children}</div>;
 }
 
-function Grupo({ title, children }: { children: ReactNode; title: string }) {
+function Group({ title, children }: { children: ReactNode; title: string }) {
   return (
     <section className="about-group">
       <h2>{title}</h2>
@@ -14,7 +14,7 @@ function Grupo({ title, children }: { children: ReactNode; title: string }) {
   );
 }
 
-function Linha({ label, note, children }: { children?: ReactNode; label: string; note?: ReactNode }) {
+function Line({ label, note, children }: { children?: ReactNode; label: string; note?: ReactNode }) {
   return (
     <div className="settings-row">
       <div>
@@ -26,5 +26,4 @@ function Linha({ label, note, children }: { children?: ReactNode; label: string;
   );
 }
 
-/** Página de configuração: coluna central, grupos com cartão e linhas de opção. */
-export const Configuracao = Object.assign(ConfiguracaoRoot, { Grupo, Linha });
+export const Configuration = Object.assign(ConfigurationRoot, { Group, Line });
