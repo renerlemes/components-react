@@ -1,6 +1,6 @@
 # Componentes
 
-Pacote `@electron-components/ui`. Os componentes ficam em `src/common`, `src/form` e `src/layout`. Cada um tem `index.tsx` e `styles.css`. O estilo entra junto com o componente.
+Pacote `@electron-components/ui`. Os componentes de desktop ficam em `src/desktop/common`, `src/desktop/form` e `src/desktop/layout`. Cada um tem `index.tsx` e `styles.css`. O estilo entra junto com o componente.
 
 ```tsx
 import { Configuration, Intro, Segment, Toggle } from '@electron-components/ui';
